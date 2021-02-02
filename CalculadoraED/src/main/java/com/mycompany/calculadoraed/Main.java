@@ -3,7 +3,9 @@ package com.mycompany.calculadoraed;
 import java.util.Scanner;
 
 public class Main {
+    
     public static void main(String[] args) {
+        
         Scanner input = new Scanner (System.in);
         boolean quit=false;
         double numero=0;
@@ -21,9 +23,14 @@ public class Main {
                     numero2 = input.nextDouble();
                     numero = Calculadora.op(dato.charAt(0), numero, numero2);
                 }
-                
+                else if(dato.equals("sqrt") || dato.equals("rt")) {
+                    numero = Calculadora.opRoot(dato, numero);
+                }
+            }
+        }
+        
     }
-
+    
     public static double convertirANumero(String dato) {
         
         double numero=0;
@@ -72,6 +79,7 @@ public class Main {
             
         }
     }
+    
     public static boolean esNumero(String dato) {
         
         int cont=0;
@@ -107,4 +115,5 @@ public class Main {
         if(dato.charAt(0)=='-') {return true;}
         else {return false;}
     }
+    
 }

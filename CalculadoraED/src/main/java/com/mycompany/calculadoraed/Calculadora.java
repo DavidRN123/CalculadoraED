@@ -15,5 +15,14 @@ public class Calculadora {
             default: return 0;
         }
     }
+    public static double opRoot(String operator, double num1) {
+        if(operator.equals("sqrt")) {
+            return Math.pow(num1, (double) 1/2);
+        } else {
+            Scanner input = new Scanner(System.in);
+            double num2 = input.nextDouble();
+            return Math.pow(num1, (double) 1/num2);
+        }
+    }
     
 }
