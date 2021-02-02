@@ -38,4 +38,24 @@ public class Calculadora {
         return (double) 1/num1;
     }
     
+    public static double opTri(String operator, double n) {
+        n = Math.toRadians(n);
+        if(operator.equals("sin")) {return Math.sin(n);}
+        else if(operator.equals("cos")) {return Math.cos(n);}
+        else if(operator.equals("tan")) {return Math.tan(n);}
+        else if(operator.equals("arcsin")) {return Math.asin(n);}
+        else if(operator.equals("arccos")) {return Math.acos(n);}
+        else if(operator.equals("arctan")) {return Math.atan(n);}
+        else {return 0;}
+    }
+    
+    public static double opFact(double n) {
+        double fact=n;
+        int numero = (int) n;
+        for(int i=numero-1; i>1; i--) {
+            fact = fact * i;
+        }
+        return fact;
+    }
+    
 }

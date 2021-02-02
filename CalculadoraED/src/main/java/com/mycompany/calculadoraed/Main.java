@@ -32,6 +32,12 @@ public class Main {
                 else if(dato.equals("inv")) {
                     numero = Calculadora.opInv(numero);
                 }
+                else if(dato.equals("sin") || dato.equals("cos") || dato.equals("tan") || dato.equals("arcsin") || dato.equals("arccos") || dato.equals("arctan")) {
+                    numero = Calculadora.opTri(dato, numero);
+                }
+                else if(dato.equals("fact")) {
+                    numero = Calculadora.opFact(numero);
+                }
             }
         }
         
