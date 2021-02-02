@@ -26,6 +26,12 @@ public class Main {
                 else if(dato.equals("sqrt") || dato.equals("rt")) {
                     numero = Calculadora.opRoot(dato, numero);
                 }
+                else if(dato.equals("ln") || dato.equals("log")) {
+                    numero = Calculadora.opLog(dato, numero);
+                }
+                else if(dato.equals("inv")) {
+                    numero = Calculadora.opInv(numero);
+                }
             }
         }
         

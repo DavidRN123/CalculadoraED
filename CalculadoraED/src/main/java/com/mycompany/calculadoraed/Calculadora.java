@@ -24,5 +24,18 @@ public class Calculadora {
             return Math.pow(num1, (double) 1/num2);
         }
     }
+    public static double opLog(String operator, double num1) {
+        if(operator.equals("ln")) {
+            return Math.log(num1);
+        } else {
+            Scanner input = new Scanner(System.in);
+            double num2 = input.nextDouble();
+            return (Math.log(num1) / Math.log(num2));
+        }
+    }
+    
+    public static double opInv(double num1) {
+        return (double) 1/num1;
+    }
     
 }
