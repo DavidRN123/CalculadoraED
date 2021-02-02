@@ -1,6 +1,8 @@
 
 package com.mycompany.calculadoraed;
 
+import java.util.Scanner;
+
 public class Calculadora {
     public static double op(char operator, double num1, double num2) {
         switch(operator) {
@@ -13,4 +15,5 @@ public class Calculadora {
             default: return 0;
         }
     }
+    
 }
