@@ -72,4 +72,39 @@ public class Main {
             
         }
     }
+    public static boolean esNumero(String dato) {
+        
+        int cont=0;
+        int cont2=0;
+        boolean puntos=false;
+        boolean character=false;
+        String datotemp="";
+        
+        if(dato.charAt(0)=='-') {
+            for(int j=1; j<dato.length(); j++) {
+                datotemp=datotemp+dato.charAt(j);
+            }
+        } else {
+            datotemp = dato;
+        }
+        for(int i=0; i<datotemp.length(); i++) {
+            if(datotemp.charAt(i)=='.') {
+                cont++;
+            } else if(datotemp.charAt(i)<'0' || datotemp.charAt(i)>'9') {
+                cont2++;
+            }
+        }
+        if(cont>1) {puntos=true;}
+        if(cont2>0) {character=true;}
+        
+        if(puntos) {return false;}
+        else if(character) {return false;}
+        else {return true;}
+        
+    }
+    
+    public static boolean negativo(String dato) {
+        if(dato.charAt(0)=='-') {return true;}
+        else {return false;}
+    }
 }
