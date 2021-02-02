@@ -38,6 +38,14 @@ public class Main {
                 else if(dato.equals("fact")) {
                     numero = Calculadora.opFact(numero);
                 }
+                else if(dato.equals("x2")) {
+                    Scanner incognita = new Scanner(System.in);
+                    int in1 = incognita.nextInt();
+                    int in2 = incognita.nextInt();
+                    int in3 = incognita.nextInt();
+                    Calculadora.opX2(in1,in2,in3);
+                    numero=0;
+                }
             }
         }
         
