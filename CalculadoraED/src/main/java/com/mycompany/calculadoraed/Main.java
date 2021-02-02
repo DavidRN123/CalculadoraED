@@ -46,6 +46,9 @@ public class Main {
                     Calculadora.opX2(in1,in2,in3);
                     numero=0;
                 }
+                else if(dato.equals("q")) {
+                    quit=true;
+                }
             }
         }
         
