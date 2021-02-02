@@ -57,5 +57,17 @@ public class Calculadora {
         }
         return fact;
     }
+    public static void opX2(int a, int b, int c) {
+		double raiz;
+		
+		raiz = (b*b)-(4*a*c);
+		if (raiz<0) {
+			System.out.println("La ecuación no tiene solución");
+		} else if (raiz==0) {
+			System.out.println("Solo hay una solución, la cual es: "+((-b)/(2*a)));
+		} else {
+			System.out.println("Las soluciones son: "+(((-b)+(Math.sqrt(raiz)))/(2*a))+" y "+(((-b)-(Math.sqrt(raiz)))/(2*a)));
+		}
+	}
     
 }
